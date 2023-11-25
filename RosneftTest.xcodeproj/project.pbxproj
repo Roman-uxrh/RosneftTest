@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8455A9E12B12197100FF6745 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455A9E02B12197100FF6745 /* Functions.swift */; };
 		84918DDD2B0E2789001F49E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84918DDC2B0E2789001F49E9 /* AppDelegate.swift */; };
 		84918DDF2B0E2789001F49E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84918DDE2B0E2789001F49E9 /* SceneDelegate.swift */; };
 		84918DE62B0E278D001F49E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84918DE52B0E278D001F49E9 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8455A9E02B12197100FF6745 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		84918DD92B0E2789001F49E9 /* RosneftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosneftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84918DDC2B0E2789001F49E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84918DDE2B0E2789001F49E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842E38B12B10D217004E196A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84918DFA2B0E5401001F49E9 /* MainViewController.swift */,
+				84918DF82B0E53B9001F49E9 /* TwoViewController.swift */,
+				84918DFC2B0E548F001F49E9 /* ThreeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8455A9DF2B12195E00FF6745 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				8455A9E02B12197100FF6745 /* Functions.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		84918DD02B0E2789001F49E9 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +110,7 @@
 		84918DF22B0E3AD1001F49E9 /* Sourse */ = {
 			isa = PBXGroup;
 			children = (
+				8455A9DF2B12195E00FF6745 /* Functions */,
 				84918DF52B0E5354001F49E9 /* TabBarControllers */,
 				84918DF02B0E3A92001F49E9 /* App */,
 			);
@@ -100,9 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				84918DF32B0E5159001F49E9 /* TabBarController.swift */,
-				84918DFA2B0E5401001F49E9 /* MainViewController.swift */,
-				84918DF82B0E53B9001F49E9 /* TwoViewController.swift */,
-				84918DFC2B0E548F001F49E9 /* ThreeViewController.swift */,
+				842E38B12B10D217004E196A /* View */,
 			);
 			path = TabBarControllers;
 			sourceTree = "<group>";
@@ -186,6 +205,7 @@
 				84918DFB2B0E5401001F49E9 /* MainViewController.swift in Sources */,
 				84918DF42B0E5159001F49E9 /* TabBarController.swift in Sources */,
 				84918DDD2B0E2789001F49E9 /* AppDelegate.swift in Sources */,
+				8455A9E12B12197100FF6745 /* Functions.swift in Sources */,
 				84918DFD2B0E548F001F49E9 /* ThreeViewController.swift in Sources */,
 				84918DDF2B0E2789001F49E9 /* SceneDelegate.swift in Sources */,
 				84918DF92B0E53B9001F49E9 /* TwoViewController.swift in Sources */,

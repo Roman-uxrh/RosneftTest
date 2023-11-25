@@ -211,6 +211,7 @@ class MainViewController: UIViewController {
         button.layer.cornerRadius = 15
         button.layer.borderWidth = 1
         button.backgroundColor = .cyan
+        button.addTarget(self, action: #selector(showsResult), for: .touchUpInside)
         return button
     }()
     
@@ -350,42 +351,42 @@ class MainViewController: UIViewController {
             make.width.equalTo(120)
             make.height.equalTo(33)
         }
-
+        
         threeTextField.snp.makeConstraints { make in
             make.top.equalTo(twoTextField.snp.bottom).offset(21)
             make.left.equalTo(oneParametrLabel.snp.left).offset(67)
             make.width.equalTo(120)
             make.height.equalTo(33)
         }
-
+        
         fourTextField.snp.makeConstraints { make in
             make.top.equalTo(threeTextField.snp.bottom).offset(21)
             make.left.equalTo(oneParametrLabel.snp.left).offset(67)
             make.width.equalTo(120)
             make.height.equalTo(33)
         }
-
+        
         fiveTextField.snp.makeConstraints { make in
             make.top.equalTo(fourTextField.snp.bottom).offset(21)
             make.left.equalTo(oneParametrLabel.snp.left).offset(67)
             make.width.equalTo(120)
             make.height.equalTo(33)
         }
-
+        
         sixTextField.snp.makeConstraints { make in
             make.top.equalTo(fiveTextField.snp.bottom).offset(21)
             make.left.equalTo(oneParametrLabel.snp.left).offset(67)
             make.width.equalTo(120)
             make.height.equalTo(33)
         }
-
+        
         sevenTextField.snp.makeConstraints { make in
             make.top.equalTo(sixTextField.snp.bottom).offset(21)
             make.left.equalTo(oneParametrLabel.snp.left).offset(67)
             make.width.equalTo(120)
             make.height.equalTo(33)
         }
-
+        
         eightTextField.snp.makeConstraints { make in
             make.top.equalTo(sevenTextField.snp.bottom).offset(21)
             make.left.equalTo(oneParametrLabel.snp.left).offset(67)
@@ -458,5 +459,27 @@ class MainViewController: UIViewController {
         }
     }
     
+    
+    
     // MARK: - Actions
+    
+    @objc
+    private func showsResult () {
+        var arrayDouble = [Double]()
+        var result = Float()
+        let arrayString = [oneTextField.text, twoTextField.text,
+                           threeTextField.text, fourTextField.text,
+                           fiveTextField.text, sixTextField.text,
+                           sevenTextField.text, eightTextField.text]
+        
+        arrayDouble = convertToDoubles(arrayString)
+        
+        if arrayDouble.count < 8 {
+            print("Не хватает значения")
+            finalIndicatorLabel.text = "Не хватает значения"
+        } else {
+            result = Float(countsResult(arrayDouble))
+            finalIndicatorLabel.text = "\(String(result)) %"
+        }
+    }
 }
